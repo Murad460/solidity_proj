@@ -1,0 +1,73 @@
+pragma solidity ^0.8.0;
+contract my_contract{
+    mapping(address=>uint) public balance;
+    function setter(uint amount,uint amount2 ) public payable returns (uint){
+        require(msg.value>amount,"insufficient balance");
+        require(msg.value>amount2,"not enough money sent");
+        balance[msg.value]=amount-amount2;
+        return balance[msg.value]
+
+    }
+    function getter() public view returns (uint){
+        return balance[msg.sender];
+    function setget(string memory data,address adr_data,uint amount) public payable returns(bool){
+        require(balance[adr_data]>amount,"insufficient balance");
+        balance[msg.sender+=amount]
+        return true;
+    }
+    function getget(uint amount23,string memory dayi,bool isdata,address adr_data) public view returns (address){
+        require(balance[msg.value]<amount23,"the amount is good");
+        if (isdata){
+            balance[msg.sender+=amount23];
+            return adr_data;
+        }
+    }
+    function add_sub(string memory stri,string memory str2,string memory str3) public view returns (string memory){
+        require( stri ==Null,"str is null so donot use it");
+        if (stri){
+            string[]  total_string =[stri,str2,str3];
+            require(total_string.length!=null,"the value is empty");
+            return total_string;
+             
+        }
+        else{
+            for(uint i,i<=total_string.length,i++){
+                uint[] total_arr_string=total_string[i]
+                
+            }
+            return total_arr_string;
+        }
+
+    }
+    event message(string memory);
+    function send_message(uint total_amount,uint send_amount,string memory string_data) public view returns(string message){
+        require(balance[msg.value]>total_amount,"the value found");
+        if (balance[msg.value]!=null){
+            balance[msg.sender]+=total_amount-send_amount;
+        }
+        if else(balance[msg.value]<send_amount){
+            emit message("low balance try again");
+            return total_amount,send_amount;
+
+        }
+        else{
+            return balance.transfer(send_amount)
+
+        }
+
+
+    }
+    function data_check(bool isdata,address sender_address,uint data) public view returns(uint){
+        require(!isdata,"data is not present");
+        if(sender_address==balance[msg.sender]){
+            balance[msg.value]+=data;
+            return data;}
+
+        else{
+            return data-send_message
+        }
+    }
+
+
+
+}
