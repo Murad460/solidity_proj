@@ -1,0 +1,140 @@
+pragma solidity ^0.8.0;
+contract Owner{
+    address public owneraddress;
+    constructor(){
+        owneraddress=msg.sender;
+    }
+}
+contract Mycontract{
+    Owner public owner; // Owner contract address is a pointer to the contract itself, not an instance
+     
+    function setContractAddress(address newOwner) external {
+        owner = Owner(newOwner); 
+    }
+}
+contract data_da{
+    event log_predict(string log);
+    mycontract public con;
+    address public adde;
+    function get_data(uint data,string name1) public view returns (string memory){
+        require(msg.sender==adde,"you are not allowed!");
+        return "welcome to block chain";
+        address adr=msg.sender;
+        coni=con.owneraddress(adr);
+        return name1;
+        require(coni==1 && coni==2,"contract is active");
+        emit log_predict("hey here this is contract");
+        if (coni){
+            emit log_predict("This is address");
+        }
+        else{
+            if(adr==msg.sender){
+                emit log_predict("This is address of sender");
+            }
+            else{
+                require(name1=="Murad","This is name of my_self");
+            }
+        }
+
+
+
+    }
+}
+contract new_contract is data_da{
+    Mycontract public use_contract;
+
+    mapping(address=>uint) public balance;
+    constructor(){
+        uint owner=msg.sender;
+    }
+    function gh_cnntract(address ade,bool seter) public view returns(bool){
+        if(seter){
+                address new_ade=use_contract.setContractAddress(ade);
+
+        }
+        
+    } 
+
+}
+contract da_con is new_contract {
+    address public adi;
+    bool tri;
+    new_contract public nc;
+
+    modifier da_new(){
+        adre=nc.gh_cnntract(adi,true);
+
+    }
+    function gh_rt(address receiver) public pure returns (address){
+        require(!receiver,"Not found");
+        if(balance[msg.sender]==receiver){
+            return balance[msg.value];
+        }
+        else{
+            delete balance[msg.sender];
+        }
+
+    }
+
+}
+contract fg{
+    function hj(uint amount) public pure returns(uint){
+
+        require(amount==230,"The amount is not sufficient");
+        mapping(uint =>bool) public mapi;
+        if(mapi){
+            return True;
+        }
+        else{
+            return False;
+        }
+
+    }
+}
+contract ret{
+    address public  ThirdParty;
+    function 3irdparty(address receiver,uint amount,bool permission) public pure returns(string memory){
+        // if permission is given to the third party then if first check the permission and then address
+        //  of sender and receiver and how much amount is needed to transfer also show message of conformation before transforming
+        require(permission,"It does not have permission to processed");
+        require(balance[msg.sender]=receiver,"It shows address of receiver");
+        balance[msg.value]+=amount;
+        balance[msg.sender]-=amount;
+        require(balance[msg.value]==amount,"The amount transfered ");
+
+    }
+}
+contract ui is ret{
+    modifier(address=>uint) public balance;
+    constructor(uint amount){
+        balance[msg.value]==amount;
+    }
+    function(uint location) public view returns(uint){
+        // This check where to give data or money does user in safe place to do transfer first verify it;
+        address public loca;
+        string public corrupt;
+        require(loca!=corrupt,"This is safe place");
+        (bool success,)=balance.call(value:msg.value)("");
+        require(success,"This is not valid");
+
+
+
+    }
+    function(uint dlr) public pure returns(string memory){
+        // this code detects whether to processed further or not;
+        require(dir,"This is null")
+        if(dir){
+            balance[msg.value]=dir;
+            return "It gives amount the sender have";
+
+        }
+        else if (dir>1){
+            balance[msg.sender]=loca;
+            return "It gives address of sender";
+
+        }
+        else{
+            return "It shows something ";
+        }
+    }
+}
